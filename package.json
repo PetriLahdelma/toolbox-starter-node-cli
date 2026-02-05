@@ -1,0 +1,45 @@
+{
+  "name": "toolbox-starter-node-cli",
+  "version": "0.1.0",
+  "description": "Production-ready Node CLI scaffold",
+  "type": "module",
+  "bin": {
+    "toolbox-starter-node-cli": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "node src/index.js --help",
+    "lint": "node --check src/index.js",
+    "typecheck": "node --check src/index.js",
+    "test": "node --test test/*.test.js",
+    "build": "npm run clean && mkdir -p dist && cp src/index.js dist/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "cli",
+    "node",
+    "starter",
+    "tooling"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PetriLahdelma/toolbox-starter-node-cli.git"
+  },
+  "homepage": "https://github.com/PetriLahdelma/toolbox-starter-node-cli#readme",
+  "bugs": {
+    "url": "https://github.com/PetriLahdelma/toolbox-starter-node-cli/issues"
+  },
+  "license": "MIT"
+}
