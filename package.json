@@ -1,8 +1,9 @@
 {
   "name": "toolbox-starter-node-cli",
   "version": "0.1.0",
-  "description": "Production-ready Node CLI scaffold",
+  "description": "Production-ready Node CLI starter",
   "type": "module",
+  "packageManager": "npm@10.8.2",
   "bin": {
     "toolbox-starter-node-cli": "dist/index.js"
   },
@@ -17,12 +18,15 @@
     "CHANGELOG.md"
   ],
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist coverage .nyc_output",
     "dev": "node src/index.js --help",
-    "lint": "node --check src/index.js",
-    "typecheck": "node --check src/index.js",
+    "lint": "node --check src/index.js && node --check test/*.test.js",
+    "typecheck": "tsc --noEmit",
     "test": "node --test test/*.test.js",
-    "build": "npm run clean && mkdir -p dist && cp src/index.js dist/index.js"
+    "test:coverage": "c8 --reporter=text --reporter=lcov node --test test/*.test.js",
+    "build": "npm run clean && mkdir -p dist && cp src/index.js dist/index.js",
+    "pack:check": "npm pack --dry-run",
+    "prepack": "npm run build"
   },
   "engines": {
     "node": ">=20"
@@ -31,7 +35,8 @@
     "cli",
     "node",
     "starter",
-    "tooling"
+    "tooling",
+    "release-please"
   ],
   "repository": {
     "type": "git",
@@ -41,5 +46,13 @@
   "bugs": {
     "url": "https://github.com/PetriLahdelma/toolbox-starter-node-cli/issues"
   },
-  "license": "MIT"
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^25.2.1",
+    "c8": "^10.1.3",
+    "typescript": "^5.9.3"
+  }
 }

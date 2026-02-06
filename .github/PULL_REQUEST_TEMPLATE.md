@@ -6,6 +6,7 @@
 - [ ] CI passes
 - [ ] Tests updated for behavior changes
 - [ ] Documentation updated where needed
+- [ ] `npm run pack:check` passed locally
 
 ## Release Notes
 - [ ] `feat:` new capability
