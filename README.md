@@ -3,6 +3,7 @@
 [![CI](https://github.com/PetriLahdelma/toolbox-starter-node-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/PetriLahdelma/toolbox-starter-node-cli/actions/workflows/ci.yml)
 [![Dependency Review](https://github.com/PetriLahdelma/toolbox-starter-node-cli/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/PetriLahdelma/toolbox-starter-node-cli/actions/workflows/dependency-review.yml)
 [![Release](https://github.com/PetriLahdelma/toolbox-starter-node-cli/actions/workflows/release.yml/badge.svg)](https://github.com/PetriLahdelma/toolbox-starter-node-cli/actions/workflows/release.yml)
+[![Publish](https://github.com/PetriLahdelma/toolbox-starter-node-cli/actions/workflows/publish.yml/badge.svg)](https://github.com/PetriLahdelma/toolbox-starter-node-cli/actions/workflows/publish.yml)
 [![License](https://img.shields.io/github/license/PetriLahdelma/toolbox-starter-node-cli)](./LICENSE)
 
 Production-ready Node CLI starter scaffolded by [`dev-toolbox`](https://github.com/PetriLahdelma/dev-toolbox).
@@ -71,6 +72,11 @@ See [`docs/EXTENDING.md`](./docs/EXTENDING.md) for command architecture and impl
 1. Merge semantic PRs (`feat:`, `fix:`, `docs:`, etc.).
 2. Release Please opens or updates the release PR.
 3. Merge the release PR to cut tag + GitHub Release.
+4. GitHub release triggers trusted npm publish with provenance.
+
+## Publishing setup
+
+See [`docs/PUBLISHING.md`](./docs/PUBLISHING.md) for npm trusted publisher setup.
 
 ## License
 
