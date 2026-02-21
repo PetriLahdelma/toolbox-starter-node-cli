@@ -1,6 +1,6 @@
 {
   "name": "toolbox-starter-node-cli",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Production-ready Node CLI starter",
   "type": "module",
   "packageManager": "npm@10.8.2",
