@@ -49,7 +49,7 @@ node dist/index.js doctor --json
 - `npm test` - Node test runner.
 - `npm run test:coverage` - coverage report with `c8`.
 - `npm run build` - clean + build `dist/index.js`.
-- `npm run pack:check` - validate publish tarball with `npm pack --dry-run`.
+- `npm run pack:check` - validate the publish tarball manifest and contents.
 
 ## CI quality gates
 

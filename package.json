@@ -25,7 +25,7 @@
     "test": "node --test test/*.test.js",
     "test:coverage": "c8 --reporter=text --reporter=lcov node --test test/*.test.js",
     "build": "npm run clean && mkdir -p dist && cp src/index.js dist/index.js",
-    "pack:check": "npm pack --dry-run",
+    "pack:check": "node scripts/verify-pack.mjs",
     "prepack": "npm run build"
   },
   "engines": {
